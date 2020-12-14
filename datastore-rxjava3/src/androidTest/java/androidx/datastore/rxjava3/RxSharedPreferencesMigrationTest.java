@@ -16,8 +16,8 @@
 
 package androidx.datastore.rxjava3;
 
-import static androidx.testutils.AssertionsKt.assertThrows;
 
+import static androidx.datastore.rxjava3.AssertThrowsKt.assertThrows;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
@@ -36,7 +36,8 @@ import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
 
-import io.reactivex.Single;
+import io.reactivex.rxjava3.core.Single;
+
 
 public class RxSharedPreferencesMigrationTest {
     @Rule

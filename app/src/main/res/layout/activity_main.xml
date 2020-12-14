@@ -35,6 +35,15 @@
         android:textColor="@android:color/black"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Message"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/et_name"
         android:layout_width="wrap_content"
@@ -60,6 +69,15 @@
         android:text="Female/Male"
         android:textSize="20sp" />
 
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Message"
+        />
+
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
@@ -69,6 +87,5 @@
         android:padding="10dp"
         android:text="Save user"
         android:textColor="@android:color/white" />
-
 
 </LinearLayout>

@@ -10,7 +10,7 @@ import androidx.datastore.rxjava3.updateDataAsync
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Single
 
-class UserManager(context: Context) {
+class UserRepo(context: Context) {
     private val dataStore = context.createDataStore(name = "user_prefs")
 
     companion object {

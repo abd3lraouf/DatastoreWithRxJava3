@@ -8,7 +8,9 @@ import tech.abd3lraouf.work.datastorewithrxjava3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val userManager: UserManager by lazy { UserManager(this) }
+    private val userRepo: UserRepo by lazy { UserRepo(this) }
+    private val messageRepo: MessageRepo by lazy { MessageRepo(this) }
+
     var name = ""
         set(value) {
             field = value
@@ -27,23 +29,32 @@ class MainActivity : AppCompatActivity() {
             binding.tvGender.text = value
         }
 
+    var message = ""
+        set(value) {
+            field = value
+            binding.tvMessage.text = value
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        userManager.userName().toLiveData().observe(this, { name = it })
-        userManager.userAge().toLiveData().observe(this, { age = it })
-        userManager.userGender().toLiveData()
+        userRepo.userName().toLiveData().observe(this, { name = it })
+        userRepo.userAge().toLiveData().observe(this, { age = it })
+        userRepo.userGender().toLiveData()
             .observe(this, { gender = if (it) "Male" else "Female" })
+        messageRepo.message().toLiveData().observe(this, { message = it })
 
         binding.btnSave.setOnClickListener {
             name = binding.etName.text.toString()
             age = binding.etAge.text.toString().toInt()
             val isMale = binding.switchGender.isChecked
             gender = if (isMale) "Male" else "Female"
+            message = binding.etMessage.text.toString()
 
-            userManager.storeUser(name, age, isMale)
+            userRepo.storeUser(name, age, isMale)
+            messageRepo.saveMessage(message)
         }
     }
 

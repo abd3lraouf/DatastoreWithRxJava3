@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "tech.abd3lraouf.work.datastorewithrxjava3";
+option java_multiple_files = true;
+
+message MessagePreferences{
+  int32 id = 1;
+  string content = 2;
+}

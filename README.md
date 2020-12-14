@@ -7,7 +7,7 @@ Datastore with RxJava3
 [![Maven Central](https://img.shields.io/maven-central/v/tech.abd3lraouf/datastore-rxjava3)](https://search.maven.org/artifact/tech.abd3lraouf/datastore-rxjava3)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0cde1bede5b34178b88fff437f046f13)](https://www.codacy.com/gh/AbdElraoufSabri/DatastoreWithRxJava3/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AbdElraoufSabri/DatastoreWithRxJava3&amp;utm_campaign=Badge_Grade)
 <br>
-This is an Android project allowing to Use Datastore using RxJava3
+This is an Android project allowing us to Use Datastore with RxJava3.
 
 USAGE
 -----

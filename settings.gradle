@@ -1,0 +1,3 @@
+include ':datastore-rxjava3'
+include ':app'
+rootProject.name = "DatastoreWithRxJava3"
